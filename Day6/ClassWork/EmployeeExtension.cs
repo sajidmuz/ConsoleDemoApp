@@ -8,7 +8,7 @@ namespace ConsoleDemoApp.Day6.ClassWork
 {
     internal static class EmployeeExtension
     {
-        static void Display(this Employee employee)
+        public static void Display(this Employee employee)
         {
             Console.WriteLine($"{employee.FullName}\t{employee.Age}");
         }
@@ -16,6 +16,13 @@ namespace ConsoleDemoApp.Day6.ClassWork
 
     class ExtensionTest
     {
-
+        static void Main(string[] args)
+        {
+            Employee employee = new Employee();
+            employee.FirstName = "Danish";
+            employee.LastName = "Jarwar";
+            employee.Age = 25;
+            employee.Display();
+        }
     }
 }
